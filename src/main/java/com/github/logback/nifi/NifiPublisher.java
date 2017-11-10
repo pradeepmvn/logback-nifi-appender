@@ -55,6 +55,9 @@ public class NifiPublisher implements Publisher {
 		transaction.complete();
 	}
 
+	/**
+	 * Main method to publish nifi Message
+	 */
 	public void publishToNifi(String message) throws Exception {
 		Transaction transaction = client.createTransaction(TransferDirection.SEND);
 
@@ -70,9 +73,7 @@ public class NifiPublisher implements Publisher {
 
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
 		while (true) {
-
 			if (messagesList.size() > 0) {
 				List<ILoggingEvent> messagesListCopy = new ArrayList<ILoggingEvent>(messagesList) {
 
