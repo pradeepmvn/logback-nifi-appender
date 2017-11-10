@@ -25,7 +25,7 @@ public class TestNifiAppender {
 		loggerContext.setStatusManager(new BasicStatusManager());
 		nifiAppender.setContext(loggerContext);
 		nifiAppender.setName("NifiAppender");
-		nifiAppender.setUrl("http://apsrs5886:8000/nifi/");
+		nifiAppender.setUrl("http://localhost:8000/nifi/");
 		nifiAppender.setReceiverPortName("FromLogback");
 		nifiAppender.setReceiverPortId("3f5c5ece-4e8f-1c7f-ffff-ffff8a1f130b");
 		nifiAppender.setPushInterval(10);
